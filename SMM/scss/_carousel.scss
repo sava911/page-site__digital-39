@@ -1,0 +1,44 @@
+
+// CAROUSEL ARROWS
+
+.carousel-nav {
+    display: flex;
+    &__arrow {
+        width: 36px;
+        height: 36px;
+        background-size: contain;
+        background-image: url("../assets/img/carousel/next.svg");
+        background-repeat: no-repeat;
+        &:hover {
+            background-image: url("../assets/img/carousel/next_hover.svg");
+        }
+
+        &:active {
+            background-image: url("../assets/img/carousel/next_active.svg");
+        }
+
+        &_disabled {
+            background-image: url("../assets/img/carousel/next_disabled.svg");
+        }
+
+        @include for-tablets() {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include for-mobiles() {
+            width: 22px;
+            height: 22px;
+        }
+
+        @include for-grand-mobiles() {
+            width: 26px;
+            height: 26px;
+        }
+
+        &_back {
+            transform: rotate(180deg);
+            margin-right: 12px;
+        }
+    }
+}

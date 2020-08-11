@@ -1,0 +1,62 @@
+.socialbar {
+    position: fixed;
+    z-index: 100;
+    width: 53px;
+    height: 387px;
+    top: 200px;
+    right: 0;
+    background-color: #3E3F43;
+    opacity: 0.8;
+    border-radius: 5px 0 0 5px;
+
+    @include for-grand-mobiles() {
+        display: none;
+    }
+
+    @include for-mobiles() {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &__list {
+        padding: 18px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__list-item {
+        display: flex;
+        position: relative;
+        height: 40px;
+        border-bottom: solid 1px #C4C4C4;
+
+        &:last-of-type {
+            border-bottom: none;
+
+
+        }
+
+        justify-content: center;
+        align-items: center;
+
+        @for $i from 1 to 10 {
+            &:nth-of-type(#{$i})>a {
+                background-image: url('../assets/icons/social/#{$i}.svg');
+            }
+        }
+    }
+
+    &__icon {
+        margin: auto;
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+}

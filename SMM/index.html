@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMM</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+    <div class="header__contacts header-contacts">
+      <div class="container header-contacts__container">
+        <ul class="header-contacts__list">
+          <li class="header-contacts__list-item">
+            <div class="icon__phone"></div><a href="tel:+78129938545">+7 (812) 993-85-45</a>
+          </li>
+          <li class="header-contacts__list-item">
+            <div class="icon__phone"></div><a href="tel:+74957400598">+ 7 (495) 740-05-98</a>
+          </li>
+          <li class="header-contacts__list-item">
+            <div class="icon__mail"></div><a href="mailto:info@1btl.ru">info@1btl.ru</a>
+          </li>
+          <li class="header-contacts__list-item button_callback">
+            <div class="icon__sphone"></div><a href="">Обратный звонок</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="position:absolute;top:-9999px;left:-9999px;">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="bars-icon" viewBox="0 0 30 17">
+          <rect width="30" height="2" fill="#3e3f43" />
+          <rect y="7" width="30" height="2" fill="#3e3f43" />
+          <rect y="15" width="30" height="2" fill="#3e3f43" />
+        </symbol>
+
+        <symbol id="search-icon" viewBox="0 0 26 28">
+          <path
+            d="M10.2 0.800049C4.57266 0.800049 0 5.3727 0 11C0 16.6274 4.57266 21.2 10.2 21.2C12.4266 21.2 14.4844 20.4829 16.1625 19.2688L24.0563 27.1438L25.7438 25.4563L17.9438 17.6375C19.4766 15.8516 20.4 13.5336 20.4 11C20.4 5.3727 15.8273 0.800049 10.2 0.800049ZM10.2 2.00005C15.1781 2.00005 19.2 6.02192 19.2 11C19.2 15.9782 15.1781 20 10.2 20C5.22188 20 1.2 15.9782 1.2 11C1.2 6.02192 5.22188 2.00005 10.2 2.00005Z"
+            fill="#3e3f43" />
+        </symbol>
+
+        <symbol id="right-arrow" viewBox="0 0 11 20">
+          <path
+            d="M0.884603 0C0.525384 0 0.203978 0.218281 0.0699155 0.55C-0.0658658 0.881719 0.0149155 1.26156 0.271009 1.51078L8.44882 9.68859L0.271009 17.8664C0.0406967 18.0864 -0.0521158 18.4147 0.0286655 18.7241C0.109447 19.0317 0.350072 19.2723 0.657728 19.3531C0.967103 19.4339 1.29538 19.3411 1.51538 19.1108L10.3154 10.3108C10.6591 9.96703 10.6591 9.41016 10.3154 9.06641L1.51538 0.266406C1.34867 0.09625 1.12179 0 0.884603 0Z"
+            fill="black" />
+        </symbol>
+
+        <symbol id="left-arrow" viewBox="0 0 11 20">
+          <path transform="rotate(180 5.286587715148925,9.690889358520508) " id="svg_1" fill="black"
+            d="m0.8846,0c-0.35922,0 -0.68062,0.21828 -0.81468,0.55c-0.13579,0.33172 -0.055,0.71156 0.20109,0.96078l8.17781,8.17781l-8.17781,8.17781c-0.23031,0.22 -0.32313,0.5483 -0.24234,0.8577c0.08078,0.3076 0.3214,0.5482 0.62906,0.629c0.30937,0.0808 0.63765,-0.012 0.85765,-0.2423l8.80002,-8.8c0.3437,-0.34377 0.3437,-0.90064 0,-1.24439l-8.80002,-8.8c-0.16671,-0.17016 -0.39359,-0.26641 -0.63078,-0.26641z" />
+        </symbol>
+
+        <symbol id="close-icon" viewBox="0 0 12 12">
+          <path
+            d="M11.541 9.32458C12.153 9.93662 12.153 10.9289 11.541 11.541C10.9289 12.153 9.93662 12.153 9.32458 11.541L0.459029 2.67542C-0.153009 2.06338 -0.15301 1.07107 0.459029 0.459029C1.07107 -0.15301 2.06338 -0.15301 2.67542 0.459029L11.541 9.32458Z"
+            fill="#3EA3F2" />
+          <path
+            d="M2.67542 11.541C2.06338 12.153 1.07107 12.153 0.459029 11.541C-0.15301 10.9289 -0.15301 9.93662 0.459029 9.32458L9.32458 0.45903C9.93662 -0.153009 10.9289 -0.153009 11.541 0.45903C12.153 1.07107 12.153 2.06338 11.541 2.67542L2.67542 11.541Z"
+            fill="#3EA3F2" />
+        </symbol>
+
+
+        <symbol id="reset-icon" viewBox="0 0 9 9">
+          <path
+            d="M8.31115 6.39744C8.7225 6.80879 8.7225 7.47572 8.31115 7.88707C7.89979 8.29843 7.23286 8.29843 6.82151 7.88707L0.862958 1.92852C0.451606 1.51717 0.451605 0.850237 0.862957 0.438885C1.27431 0.0275331 1.94124 0.027533 2.3526 0.438885L8.31115 6.39744Z"
+            fill="#434343" />
+          <path
+            d="M2.3526 7.88707C1.94124 8.29843 1.27431 8.29843 0.862957 7.88707C0.451605 7.47572 0.451605 6.80879 0.862957 6.39744L6.82151 0.438886C7.23286 0.0275336 7.8998 0.0275338 8.31115 0.438886C8.7225 0.850238 8.7225 1.51717 8.31115 1.92852L2.3526 7.88707Z"
+            fill="#434343" />
+        </symbol>
+      </svg>
+    </div>
+
+    <div class="navigation" id="navigation">
+      <div class="navigation-content container">
+        <button class="navigation-burger-button">
+          <svg width="30" height="17">
+            <use xlink:href="#bars-icon"></use>
+          </svg>
+        </button>
+        <a href="/" class="navigation-logo"></a>
+        <nav class="navigation-nav" role="navigation">
+
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="/">Услуги</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Возможности</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Digital</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">BTL-партнерство</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Персонал</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Новости</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="navigation-search">
+            <form class="navigation-search-form" action="/" method="get">
+              <input type="text" name="query" class="navigation-search-input input"
+                placeholder="Здесь может быть ваш запрос" autocomplete="off">
+              <button type="reset" class="navigation-search-reset">
+                <svg width="9" height="9">
+                  <g opacity="0.3">
+                    <use xlink:href="#reset-icon"></use>
+                  </g>
+                </svg>
+              </button>
+            </form>
+
+            <button class="navigation-search-button">
+              <svg width="26" height="28">
+                <use xlink:href="#search-icon"></use>
+              </svg>
+            </button>
+          </div>
+
+        </nav>
+      </div>
+
+      <div class="header__subnavigation subnavigation">
+        <ul class="subnavigation__list container">
+          <li class="subnavigation__listitem"><a href="">Тизерная реклама</a></li>
+          <li class="subnavigation__listitem"><a href="">SMM Продвижение</a></li>
+          <li class="subnavigation__listitem"><a href="">Медийная и баннерная реклама</a></li>
+          <li class="subnavigation__listitem"><a href="">E-mail Маркетинг</a></li>
+          <li class="subnavigation__listitem"><a href="">SERM</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header__position">
+      <ul class="position__list container">
+        <li class="position__listitem"><a href="">Clever Marketing</a></li>
+        <li class="position__listitem"><a href="">Digital</a></li>
+        <li class="position__listitem"><a href="">SMM-продвижение</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <!-- <aside class="socialbar">
+        <ul class="socialbar__list">
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+          <li class="socialbar__list-item"><a href="" class="socialbar__icon"></a></li>
+        </ul>
+      </aside> -->
+
+  <button class="up-button">
+  </button>
+
+  <div class="content">
+
+    <div class="smm">
+      <div class="container smm__container background-text">
+        <h1 class="smm__title supertitle">Комплексный SMM</h1>
+        <p class="smm__description description">Мы предлагаем SMM продвижение и раскрутку сообществ, пабликов и
+          аккаунтов во всех социальных сетях.</p>
+        <div class="smm__socials">
+          <p>Мы работаем с:</p>
+          <ul class="smm__list">
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+            <li class="smm__list-item"><a href="" class="smm__icon"></a></li>
+          </ul>
+          <button class="button">Получить консультацию</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tags">
+      <div class="container">
+        <div class="tags-linewrapper">
+          <div class="tags-linewrapper-leftarrow tags-linewrapper-leftarrow_hidden">
+            <svg width="11" height="20">
+              <use xlink:href="#left-arrow"></use>
+            </svg>
+          </div>
+
+          <div class="tags-linewrapper-content">
+            <ul class="tags-line">
+
+              <li class="tags-line-item">Акции HoReCa<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+
+              </li>
+              <li class="tags-line-item">Адресная рассылка
+                <button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="tags-line-item">Дегустации<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+              <li class="tags-line-item">Сэмплинг<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+              <li class="tags-line-item">Лифлетинг<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+              <li class="tags-line-item">Праздничное открытие<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+              <li class="tags-line-item">Тайный покупатель
+                <button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="tags-line-item">Выставки<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+              <li class="tags-line-item">Розыгрыши<button class="tags-line-item-close">
+                  <svg width="12" height="12">
+                    <use xlink:href="#close-icon"></use>
+                  </svg></button>
+              </li>
+            </ul>
+          </div>
+          <div class="tags-linewrapper-rightarrow tags-linewrapper-rightarrow_hidden">
+            <svg width="11" height="20">
+              <use xlink:href="#right-arrow"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="tags-linewrapper">
+          <div class="tags-linewrapper-content">
+            <ul class="tags-line">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="container services__container">
+        <div class="services__title title">Наши услуги</div>
+        <ul class="services__cards">
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Выбор стратегии</h3>
+            <p class="services__text card-text">Проведение анализа целевой аудитории, ниши, в которой вы себя
+              позиционируете, аудит конкурентов. Определение стратегии SMM</p>
+          </li>
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Ведение и продвижение групп, пабликов и аккаунтов</h3>
+            <p class="services__text card-text">Оформление и настройка виджетов. Для этого мы подключаем все инструменты
+              продвижения в социальных сетях.</p>
+          </li>
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Качественный копирайтинг постов и комьюнити</h3>
+            <p class="services__text card-text">Подготовка контент-плана (текст и визуализация). Постинг по графику
+              контент-плана, комьюнити-менеджмент (обработка обращений ЦА), проведение розыгрышей.</p>
+          </li>
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Креативные концепции</h3>
+            <p class="services__text card-text">Залог успеха продвижения бизнеса в социальных сетях - это креативный
+              подход. Анализируем предпочтения ЦА, берем только свежие идеи и анализируем отклик.</p>
+          </li>
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Настройка рекламы</h3>
+            <p class="services__text card-text">Выстраиваем <a target="_blank"
+                href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%80%D0%B3%D0%B5%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0">таргетированную
+                рекламу,</a> раскручиваем промо-посты, используем сервисы автопостинга и пр.</p>
+          </li>
+          <li class="services__card">
+            <div class="services__icon"></div>
+            <h3 class="services__subtitle subtitle">Предоставление планов и отчетов о проделанной работе</h3>
+            <p class="services__text card-text">Регулярно информируем клиентов о продвижении проекта, предоставляем
+              статистику по приросту подписчиков, охвату посещаемости и активности. Анализируем демографические и
+              географические показатели прироста пользователей.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="profits">
+      <div class="container background-text profits__container">
+        <div class="title">Зачем использовать <a target="_blank"
+            href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3_%D0%B2_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%81%D0%B5%D1%82%D1%8F%D1%85">SMM</a>
+        </div>
+        <p class="description">При продвижении вашего бизнеса?</p>
+        <ul class="profits__list">
+          <li class="profits__list-item list-text">Стать узнаваемым брендом в соц. сетях, поисковиках (максимально
+            распространить информацию о вашей компании)</li>
+          <li class="profits__list-item list-text">Укрепить имидж и репутацию компании</li>
+          <li class="profits__list-item list-text">Сформировать аудиторию клиентов-фанатов бренда, которые будут
+            приходить к вам снова и снова</li>
+          <li class="profits__list-item list-text">Вести регулярную коммуникацию с целевой аудиторией</li>
+          <li class="profits__list-item list-text">Иметь постоянную площадку для информирования подписчиков о ваших
+            товарах и услугах, новинках и разработках, скидках и акциях</li>
+          <li class="profits__list-item list-text">Увеличить количество продаж путем вовлечения потребителя в жизнь
+            бренда</li>
+        </ul>
+        <button class="button">Связаться с нами</button>
+      </div>
+    </div>
+
+    <div class="stages">
+      <div class="container">
+        <div class="stages__title title">Этапы работы</div>
+        <ul class="stages__list">
+          <li class="stages__stage">
+            <div class="stages__icon"></div>
+            <h3 class="stages__subtitle subtitle">Обсуждение</h3>
+            <p class="card-text">На этом этапе мы обсуждаем особенности вашего бизнеса, проводим полную аналитику и
+              выбираем стратегию продвижения</p>
+          </li>
+          <li class="stages__stage">
+            <div class="stages__icon"></div>
+            <h3 class="stages__subtitle subtitle">Проведение</h3>
+            <p class="card-text">Мы берем под свой контроль весь процесс продвижения бизнеса в социальных сетях и
+              предоставляем отчеты о ходе кампании</p>
+          </li>
+          <li class="stages__stage">
+            <div class="stages__icon"></div>
+            <h3 class="stages__subtitle subtitle">Завершение</h3>
+            <p class="card-text">Предоставим результаты нашей работы и обеспечим вас планом дальнейшего продвижения
+              через социальные сети</p>
+          </li>
+        </ul>
+        <div class="stages__bottom">
+          <button class="button">Провести аналитику</button>
+          <div class="stages__price list-text">Стоимость продвижения в социальных сетях от 18 000 руб. в месяц</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="problems">
+      <div class="problems__container container background-text">
+        <div class="problems__title title">Планируете заказать услуги по SMM&#8209;продвижению?</div>
+        <p class="description">Обратиться в специализированное агентство или к фрилансеру?</p>
+        <div class="problems__solutions">
+          <div class="problems__error secondary-text">Искать SMM-гуру - это столкнуться с проблемой поиска грамотного
+            специалиста. <br><br>
+            Вам придется «перебрать» несколько вариантов прежде чем Вы сможете доверить выполнение множества задач
+            (создание сообщества, публикация постов и т.д.) одному человеку</div>
+          <div class="problems__success secondary-text">У нас над проектом работает команда специалистов в области
+            раскрутки соц.сетей: контент-менеджеры, копирайтеры, дизайнеры, таргетологи и аккаунт-менеджеры. <br><br>
+            Имея большой опыт, наши специалисты помогут вывести ваш бренд на новый уровень. С каждым клиентом мы
+            оформляем договор, в котором прописываем все условия сотрудничества</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="container">
+        <div class="benefits__title title">Почему у нас выгодно заказать&nbsp;SMM?</div>
+        <p class="description">Наше SMM-агентство поможет вам в эффективном продвижении в социальных сетях</p>
+        <ul class="benefits__list">
+          <li class="benefits__benefit">
+            <div class="benefits__icon"></div>
+            <h3 class="benefits__subtitle subtitle">Индивидуальный подход</h3>
+            <p class="card-text">Для каждого проекта мы разрабатываем отдельный пошаговый план с учетом особенностей
+              вашего бизнеса, а также рассчитываем точную стоимость SMM</p>
+          </li>
+          <li class="benefits__benefit">
+            <div class="benefits__icon"></div>
+            <h3 class="benefits__subtitle subtitle">Комфортное взаимодействие</h3>
+            <p class="card-text">Мы предоставляем детальную отчетность по каждому проекту. В случае возникновения
+              вопросов мы готовы сразу ответить на них</p>
+          </li>
+          <li class="benefits__benefit">
+            <div class="benefits__icon"></div>
+            <h3 class="benefits__subtitle subtitle">Уникальный контент</h3>
+            <p class="card-text">Мы за качественный и свежий контент. Мы говорим "нет" надоевшим картинкам, шаблонам,
+              канцеляризмам в постах</p>
+          </li>
+        </ul>
+        <div class="benefits__commercial">
+          <div class="benefits__subtitle subtitle">Получите коммерческое предложение прямо сейчас!</div>
+          <p class="benefits__description card-text">Заполните краткую форму и получите коммерческое предложение в
+            течении нескольких минут!</p>
+          <form action="commercial" class="benefits__form">
+            <input class="benefits__input input" type="text" placeholder="Ваше имя">
+            <input class="benefits__input input" type="email" name="" id="" placeholder="E-mail">
+            <input class="benefits__input input" type="tel" name="" id="" placeholder="Телефон">
+            <button class="button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="additional background-text">
+      <div class="additional__container container">
+        <div class="additional__title title">Дополнительные услуги</div>
+        <p class="additional__description description">Мы предлагаем ряд дополнительных услуг для повышения
+          эффективности продвижения и достижения максимального результата.</p>
+        <ul class="additional__list">
+          <li class="additional__list-item list-text">Привлечение в группу лояльной целевой аудитории по заданным
+            критериям (<a href="">пол, возраст, гео и т.д.</a>)</li>
+          <li class="additional__list-item list-text">Написание «органических» комментариев</li>
+          <li class="additional__list-item list-text">Одностраничный лендинг для Instagram (таплинк)</li>
+          <li class="additional__list-item list-text">Таргетинг на посты в ленте</li>
+          <li class="additional__list-item list-text">Закуп рекламы у блогеров/в популярных пабликах</li>
+          <li class="additional__list-item list-text">Посевы в сообществах и комментариях</li>
+          <li class="additional__list-item list-text">Взаимный пиар и коллаборации (в том числе поиск и подбор
+            партнеров)</li>
+          <li class="additional__list-item list-text">Гивы и марафоны</li>
+          <li class="additional__list-item list-text">Подбор фото/видеографа, написание ТЗ, обработка фотографий</li>
+          <li class="additional__list-item list-text">Услуги фотографа</li>
+          <li class="additional__list-item list-text">Услуги видеографа</li>
+          <li class="additional__list-item list-text">Перевод на иностранные языки</li>
+          <li class="additional__list-item list-text">Копирайтинг, в том числе SEO тексты</li>
+          <li class="additional__list-item list-text">SERM управление репутацией</li>
+          <li class="additional__list-item list-text">E-mail, sms и мессенджеры - рассылка</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="choice">
+      <div class="container">
+        <div class="choice__title title">Выбор клиентов</div>
+        <p class="description">Для более эффективного продвижения в социальных сетях, наши клиенты также выбирают:</p>
+        <ul class="choice__list">
+          <li class="choice__list-item">
+            <div class="choice__icon"></div>
+            <h3 class="choice__subtitle subtitle">Таргетированную рекламу</h3>
+            <button class="button choice__button">Подробнее</button>
+          </li>
+          <li class="choice__list-item">
+            <div class="choice__icon"></div>
+            <h3 class="choice__subtitle subtitle">Реклама через лидеров мнений</h3>
+            <button class="button choice__button">Подробнее</button>
+          </li>
+          <li class="choice__list-item">
+            <div class="choice__icon"></div>
+            <h3 class="choice__subtitle subtitle">Управление репутацией в интернете</h3>
+            <button class="button choice__button">Подробнее</button>
+          </li>
+          <li class="choice__list-item">
+            <div class="choice__icon"></div>
+            <h3 class="choice__subtitle subtitle">Выстраивание имиджа в интернете</h3>
+            <button class="button choice__button">Подробнее</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="our-works">
+      <div class="container our-works__container background-text">
+        <div class="our-works__header">
+          <h2 class="title">Портфолио</h2>
+          <nav class="carousel-nav">
+            <a href="" class="carousel-nav__arrow carousel-nav__arrow_back"></a>
+            <a href="" class="carousel-nav__arrow"></a>
+          </nav>
+        </div>
+        <div class="our-works__portfolio portfolio">
+          <div class="portfolio__header">
+            <div class="portfolio__date">
+              <h4 class="subtitle__h4">Период</h4>
+              <p class="list-text__secondary">Март 2019</p>
+            </div>
+            <div class="portfolio__location">
+              <h4 class="subtitle__h4">Локация</h4>
+              <p class="list-text__secondary">г.Москва</p>
+            </div>
+          </div>
+          <div class="subtitle__h4">Список работ</div>
+          <ul class="our-works__list">
+            <li class="our-works__list-item list-text__secondary">Настройка таргетированной рекламы</li>
+            <li class="our-works__list-item list-text__secondary">Ведение и продвижение групп, пабликов и аккаунтов</li>
+            <li class="our-works__list-item list-text__secondary">Настройка таргетированной рекламы</li>
+            <li class="our-works__list-item list-text__secondary">Ведение и продвижение групп, пабликов и аккаунтов</li>
+          </ul>
+          <div class="portfolio__bottom">
+            <div class="portfolio__subscribers">
+              <p class="portfolio__counts">+150,000</p>
+              <p>Подписчиков/мес.</p>
+            </div>
+            <div class="portfolio__views">
+              <p class="portfolio__counts">+30,000</p>
+              <p>Просмотров рекламных роликов</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footerTags">
+      <div class="container">
+        <ul class="footerTags-content">
+          <li class="footerTags-content-item">Акции HoReCa</li>
+          <li class="footerTags-content-item">Адресная рассылка</li>
+          <li class="footerTags-content-item">Дегустации</li>
+          <li class="footerTags-content-item">Сэмплинг</li>
+          <li class="footerTags-content-item">Тайный покупатель</li>
+          <li class="footerTags-content-item">Лифлетинг</li>
+          <li class="footerTags-content-item">Праздничное открытие</li>
+          <li class="footerTags-content-item">Интеграция в праздник</li>
+          <li class="footerTags-content-item">Акции HoReCa</li>
+          <li class="footerTags-content-item">Адресная рассылка</li>
+          <li class="footerTags-content-item">Сэмплинг</li>
+          <li class="footerTags-content-item">Тайный покупатель</li>
+          <li class="footerTags-content-item">Лифлетинг</li>
+          <li class="footerTags-content-item">Праздничное открытие</li>
+          <li class="footerTags-content-item">Интеграция в праздник</li>
+          <li class="footerTags-content-item">Акции HoReCa</li>
+          <li class="footerTags-content-item">Адресная рассылка</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <footer class="footer__container">
+      <div class="container">
+
+        <div class="footer__content">
+
+          <div class="footer__block-logo">
+            <a href="">
+              <div class="footer__logo"></div>
+            </a>
+            <p class="footer__description">Маркетинговое продвижение от разработки до реализации во всех регионах
+              России.
+            </p>
+          </div>
+
+          <ul class="footer__link-list">
+            <li class="footer__link"><a href="">Услуги</a></li>
+            <li class="footer__link"><a href="">Возможности</a></li>
+            <li class="footer__link"><a href="">BTL-партнерство</a></li>
+            <li class="footer__link"><a href="">Digital</a></li>
+            <li class="footer__link"><a href="">Контакты</a></li>
+            <li class="footer__link"><a href="">Новости</a></li>
+            <li class="footer__link"><a href="">Персонал</a></li>
+          </ul>
+
+          <ul class="footer__adress-list">
+            <li class="footer__address list-text">
+              <div class="icon__place"></div>г. Москва, ул. Новоостаповская, 6А, стр. 3
+            </li>
+            <li class="footer__address list-text">
+              <div class="icon__phone"></div>+ 7 (495) 7400598
+            </li>
+            <li class="footer__address list-text">
+              <div class="icon__place"></div>г. Санкт-Петербург ул. Цветочная 16/1, БЦ Осипофф
+            </li>
+            <li class="footer__address list-text">
+              <div class="icon__phone"></div>+7 (812) 993-85-45
+            </li>
+            <li class="footer__address list-text">
+              <div class="icon__mail"></div>info@1btl.ru
+            </li>
+          </ul>
+
+          <div class="footer__questions">
+            <h3 class="footer__question-title subtitle__h4">Остались вопросы?</h3>
+            <p class="footer__question-subtitle">Задайте их нам прямо сейчас!</p>
+            <button class="footer__question-btn">Задать вопрос</button>
+            <div class="footer__schedule">
+              <div class="icon__watch"></div>
+              <p><span class="secondary">Будни: </span>09.00-18.00</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">Copyright © Clever marketing, 2019 </p>
+          <a href="" class="footer__confidencial secondary-text">Политика конфиденциальности</a>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

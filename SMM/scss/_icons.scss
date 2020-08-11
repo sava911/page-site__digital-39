@@ -1,0 +1,93 @@
+//ICONS
+
+.icon {
+    &__sphone {
+        background: url('../assets/icons/sphone.svg') no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 22px;
+        height: 22px;
+        margin: auto 0;
+        margin-right: 8px;
+    }
+
+    &__phone {
+        background: url('../assets/icons/phone.svg') no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+        margin: auto 0;
+        margin-right: 8px;
+
+        @include for-mobiles() {
+            width: 14px;
+            height: 14px;
+        }
+
+        @include for-grand-mobiles() {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__place {
+        background-image: url('../assets/icons/place.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+        margin: auto 0;
+        margin-right: 8px;
+
+        @include for-mobiles() {
+            width: 14px;
+            height: 14px;
+        }
+
+        @include for-grand-mobiles() {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__mail {
+        background-image: url('../assets/icons/mail.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+        margin: auto 0;
+        margin-right: 8px;
+
+        @include for-mobiles() {
+            width: 14px;
+            height: 14px;
+        }
+
+        @include for-grand-mobiles() {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__watch {
+        background-image: url('../assets/icons/watch.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 21px;
+        height: 21px;
+        margin-right: 13px;
+
+        @include for-mobiles() {
+            width: 14px;
+            height: 14px;
+            margin-right: 7px;
+        }
+
+        @include for-grand-mobiles() {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
